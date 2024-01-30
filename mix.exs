@@ -17,10 +17,7 @@ defmodule Charex.MixProject do
         files: ~w(lib .formatter.exs mix.exs README* LICENSE*
                  CHANGELOG* checksum-*.exs native/charex_native/src native/charex_native/.cargo native/charex_native/Cargo.toml)
       ],
-      docs: [
-        main: "Charex",
-        extras: ["README.md"]
-      ],
+      docs: docs(),
       version: @version,
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
@@ -35,6 +32,19 @@ defmodule Charex.MixProject do
       extra_applications: [:logger]
     ]
   end
+
+
+  defp docs do
+    [
+      main: "readme",
+      name: "Charex",
+      source_ref: "v#{@version}",
+      canonical: "https://hexdocs.pm/charex",
+      source_url: @source_url,
+      extras: ["README.md", "CHANGELOG.md", "LICENSE"]
+    ]
+  end
+
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
