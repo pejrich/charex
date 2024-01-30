@@ -37,7 +37,7 @@ defmodule Charex.MixProject do
   defp docs do
     [
       main: "Charex",
-      name: "Charex",
+      name: "charex",
       source_ref: "v#{@version}",
       canonical: "https://hexdocs.pm/charex",
       source_url: @source_url,
