@@ -43,8 +43,14 @@ defmodule Charex.Token do
         }
 
   @spec all_scripts() :: [script()]
+  @doc """
+  Returns a list of all #{length(@scripts)} of the script values used in the `script` key
+  """
   def all_scripts, do: @scripts
 
   @spec all_langs() :: [lang()]
+  @doc """
+  Returns a list of all #{length(@langs)} of the language values used in the `language` key
+  """
   def all_langs, do: @langs
 end

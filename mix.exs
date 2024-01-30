@@ -12,7 +12,7 @@ defmodule Charex.MixProject do
       package: [
         name: "charex",
         licenses: ["MIT"],
-        links: %{"GitHub" => @source_url},
+        links: %{"GitHub" => @source_url, "HexDocs" => "https://hexdocs.pm/charex/Charex.html"},
         source_url: @source_url,
         files: ~w(lib .formatter.exs mix.exs README* LICENSE*
                  CHANGELOG* checksum-*.exs native/charex_native/src native/charex_native/.cargo native/charex_native/Cargo.toml)
