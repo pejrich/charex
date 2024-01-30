@@ -1,0 +1,15 @@
+[package]
+name = "charex_native"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[lib]
+name = "charex_native"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.30.0"
+charabia = "0.8.5"
+enum_to_enum = "0.1.0"
