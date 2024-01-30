@@ -2,9 +2,9 @@ defmodule Charex do
   @moduledoc """
   This library mostly wraps the Charabia library from Rust.
 
-  [docs](https://docs.rs/charabia/latest/charabia/)
-  [crate](https://crates.io/crates/charabia)
-  [github](https://github.com/meilisearch/charabia)
+  - [docs](https://docs.rs/charabia/latest/charabia/)
+  - [crate](https://crates.io/crates/charabia)
+  - [github](https://github.com/meilisearch/charabia)
 
   This library mostly just calls that library, and passes the response back through to Elixir.
 
@@ -36,6 +36,8 @@ defmodule Charex do
 
   @spec tokenize(String.t()) :: [Charex.Token.t()]
   @doc """
+  Tokenizes a string into a list of `Charex.Token` structs.
+
   ```elixir
   iex> tokenize("This is an example.")
   [%Charex.Token{kind: :word, lemma: "this", char_start: 0, char_end: 4, byte_start: 0, byte_end: 4, char_map: nil, script: :latn, language: :other}, ...]
@@ -51,7 +53,7 @@ defmodule Charex do
 
   @spec segmentize(String.t()) :: [String.t()]
   @doc """
-  A slightly faster version that just segments the string into string chunks.
+  A slightly faster version that segments the string into a list of strings.
 
   ```elixir
   iex> segmentize("This is an example.")

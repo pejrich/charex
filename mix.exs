@@ -10,15 +10,15 @@ defmodule Charex.MixProject do
       description:
         "Elixir NIF wrapper of the Rust Charabia string tokenization/segmentation library",
       package: [
-        name: "charex",
+        name: "Charex",
         licenses: ["MIT"],
         links: %{"GitHub" => @source_url},
         source_url: @source_url,
         files: ~w(lib .formatter.exs mix.exs README* LICENSE*
-                 CHANGELOG*)
+                 CHANGELOG* checksum-*.exs native/charex_native/src native/charex_native/.cargo native/charex_native/Cargo.toml)
       ],
       docs: [
-        main: "charex",
+        main: "Charex",
         extras: ["README.md"]
       ],
       version: @version,
