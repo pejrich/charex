@@ -10,7 +10,7 @@ defmodule Charex.MixProject do
       description:
         "Elixir NIF wrapper of the Rust Charabia string tokenization/segmentation library",
       package: [
-        name: "charex",
+        name: "Charex",
         licenses: ["MIT"],
         links: %{"GitHub" => @source_url},
         source_url: @source_url,
@@ -36,7 +36,7 @@ defmodule Charex.MixProject do
 
   defp docs do
     [
-      main: "readme",
+      main: "Charex",
       name: "Charex",
       source_ref: "v#{@version}",
       canonical: "https://hexdocs.pm/charex",

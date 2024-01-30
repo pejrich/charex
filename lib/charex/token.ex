@@ -6,8 +6,8 @@ defmodule Charex.Token do
   ### `char_map`
   seems to always be nil from what I can tell, but there might be some languages that use it, so it's here for compatibility, but don't be surprised if it's nil for you.
   ### `char_start`/`char_end`
-  These are not really char indexes like you'd get from `String.length/1` in Elixir.
-  They are really codepoint indexes.
+  These are not really characters as we may commonly think of them(which are actually called grapheme clusters in Unicode).
+  `String.length/1` in Elixir for example counts grapheme clusters, which is different than what this range is counting, which is codepoint indexes.
   For example `"👨‍👩‍👧‍👦"` would have a `start`/`end` that is 7 numbers apart instead of 1 number apart.
   This is the same as you'd get from `String.codepoints/1`, or `to_charlist/1`
   ### `byte_start`/`byte_end`
