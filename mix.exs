@@ -1,6 +1,10 @@
 defmodule Charex.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+  @source_url "https://github.com/pejrich/charex"
+
+
   def project do
     [
       app: :charex,
@@ -8,8 +12,8 @@ defmodule Charex.MixProject do
       package: [
         name: "charex",
         licenses: ["MIT"],
-        links: %{"GitHub" => "https://github.com/pejrich/charex"},
-        source_url: "https://github.com/pejrich/charex",
+        links: %{"GitHub" => @source_url},
+        source_url: @source_url,
         files: ~w(lib .formatter.exs mix.exs README* LICENSE*
                  CHANGELOG*)
       ],
@@ -17,7 +21,7 @@ defmodule Charex.MixProject do
         main: "charex",
         extras: ["README.md"]
       ],
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
